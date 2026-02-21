@@ -9,5 +9,7 @@ on:
 jobs:
   summarize:
     uses: souri-t/own-reusable-workflows/.github/workflows/summarize.yml@main
+    permissions:
+      contents: write
     secrets:
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
