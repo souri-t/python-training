@@ -1,0 +1,13 @@
+name: コミット要約の自動生成
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  summarize:
+    uses: souri-t/own-workflows/.github/workflows/summarize.yml@main
+    secrets:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
